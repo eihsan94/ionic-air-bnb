@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- 
+      <ion-back-button></ion-back-button> :  this contains the back click  event with the icon embedded
+      defaultHref="/places/tabs/discover":  if the page is reloaded it will still have the default routes that can help it navigate back
+       -->
+      <ion-back-button defaultHref="/places/tabs/discover"></ion-back-button> 
+    </ion-buttons>
+    <ion-title>Place Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-button color="primary" margin (click)="onBookPlace()">Book</ion-button>
+</ion-content>
