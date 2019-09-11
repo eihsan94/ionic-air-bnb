@@ -21,6 +21,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [BookingsPage]
+  // declarations: [BookingsPage, CreateBookingComponent] // create booking component is not the component that we want to use here
+  declarations: [BookingsPage] // create booking component is not the component that we want to use here
 })
 export class BookingsPageModule {}
