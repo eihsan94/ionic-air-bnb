@@ -18,28 +18,26 @@ export class NewOfferPage implements OnInit {
           Validators.required
         ]
       }),
-      description: new FormControl({
+      description: new FormControl(null, {
         updateOn: 'blur',
         validators: [
           Validators.required,
           Validators.maxLength(180),
         ]
       }),
-      price: new FormControl({
+      price: new FormControl(null, {
         updateOn: 'blur',
         validators: [
           Validators.required,
           Validators.min(1),
         ]
       }),
-      dateFrom: new FormControl({
-        updateOn: 'blur',
+      dateFrom: new FormControl(null, {
         validators: [
           Validators.required,
         ]
       }),
-      dateTo: new FormControl({
-        updateOn: 'blur',
+      dateTo: new FormControl(null, {
         validators: [
           Validators.required,
         ]
