@@ -14,6 +14,8 @@ import { Subscription } from 'rxjs';
 export class EditOfferPage implements OnInit, OnDestroy {
   form: FormGroup;
   place: Place;
+  placeId: string;
+  isLoading = false;
   private _placesSub = new Subscription();
 
   constructor(
@@ -26,7 +28,12 @@ export class EditOfferPage implements OnInit, OnDestroy {
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe(
       paramMap => {
-        !paramMap.has('placeId') ? this.navCtrl.navigateBack('/places/tabs/discover') :
+        if (!paramMap.has('placeId')) {
+          this.navCtrl.navigateBack('/places/tabs/discover');
+          return;
+        }
+        this.placeId = paramMap.get('placeId');
+        this.isLoading = true;
         this._placesSub.add(this.placesService.getPlace(paramMap.get('placeId')).subscribe(p => {
           this.place = p;
           this.form = new FormGroup({
@@ -44,6 +51,7 @@ export class EditOfferPage implements OnInit, OnDestroy {
               ]
             }),
           });
+          this.isLoading = false;
         }));
       }
     );
