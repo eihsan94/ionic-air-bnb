@@ -1,14 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { PlacesService } from '../../places.service';
+import { Place } from '../../place';
+import { Router } from '@angular/router';
+import { LoadingController } from '@ionic/angular';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-new-offer',
   templateUrl: './new-offer.page.html',
   styleUrls: ['./new-offer.page.scss'],
 })
-export class NewOfferPage implements OnInit {
+export class NewOfferPage implements OnInit, OnDestroy {
   form: FormGroup;
-  constructor() { }
+  startDate =  new Date().toISOString();
+  private _subs = new Subscription();
+
+  constructor(
+    private placeService: PlacesService,
+    private router: Router,
+    private loadingCtrl: LoadingController
+  ) { }
 
   ngOnInit() {
     this.form = new FormGroup({
@@ -32,19 +44,43 @@ export class NewOfferPage implements OnInit {
           Validators.min(1),
         ]
       }),
-      dateFrom: new FormControl(null, {
+      availableFrom: new FormControl(null, {
         validators: [
           Validators.required,
         ]
       }),
-      dateTo: new FormControl(null, {
+      availableTo: new FormControl(null, {
         validators: [
           Validators.required,
         ]
       }),
     });
+    this._subs.add(this.form.controls.availableFrom.valueChanges.subscribe(v => this.startDate = v));
   }
   onCreateOffer() {
-    console.log('creating offer page', this.form.value);
+    if (!this.form.valid) {
+      return;
+    }
+    this.loadingCtrl.create({
+      message: 'Creating offer...'
+    })
+    .then(loadingEl => {
+      loadingEl.present();
+      this.placeService.addPlace(this.form.value).subscribe(() => { // we dont need to clear this subs because the observable use take(1)
+        this.form.reset();
+        this.router.navigateByUrl('/places/tabs/offers');
+        this.loadingCtrl.dismiss();
+      });
+    });
+  }
+
+  datesValid(): boolean {
+    const startDate = new Date(this.form.value.availableFrom);
+    const endDate = new Date(this.form.value.availableTo);
+    return endDate > startDate;
+  }
+
+  ngOnDestroy() {
+    this._subs.unsubscribe();
   }
 }

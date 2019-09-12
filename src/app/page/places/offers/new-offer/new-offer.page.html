@@ -5,7 +5,7 @@
     </ion-buttons>
     <ion-title>New Offer</ion-title>
     <ion-buttons slot="primary">
-      <ion-button (click)="onCreateOffer()" [disabled]="!form.valid">
+      <ion-button (click)="onCreateOffer()" [disabled]="!form.valid || !datesValid()">
         <ion-icon slot="icon-only" name="checkmark"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -37,10 +37,10 @@
             <ion-textarea rows="3" formControlName="description"></ion-textarea>
           </ion-item>
           <ion-item *ngIf="!form.get('description').valid && form.get('description').touched" lines="none">
-              <div class="err">
-                Description must be between 1 to 180
-              </div>
-            </ion-item>
+            <div class="err">
+              Description must be between 1 to 180
+            </div>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -51,35 +51,59 @@
             <ion-input type="number" formControlName="price"></ion-input>
           </ion-item>
           <ion-item *ngIf="!form.get('price').valid && form.get('price').touched" lines="none">
-              <div class="err">
-                This is required
-              </div>
-            </ion-item>
+            <div class="err">
+              This is required
+            </div>
+          </ion-item>
         </ion-col>
       </ion-row>
 
       <ion-row>
         <ion-col size-sm="3" offset-sm="3">
           <ion-item>
-            <ion-label position="floating" [ngClass]="{'err': !form.get('dateFrom').valid && form.get('dateFrom').touched}">Available from</ion-label>
-            <ion-datetime min="2019-01-01" max="2025-12-31" formControlName="dateFrom"></ion-datetime>
+            <ion-label position="floating" [ngClass]="{'err': (form.controls.availableFrom?.invalid || !datesValid() && form.controls.availableTo?.dirty) && form.controls.availableFrom?.touched }">
+              Available from</ion-label>
+            <ion-datetime 
+            display-format="YYYY-MM-DD" 
+            picker-format="YYYY MMM DD" 
+            min="2019-01-01"
+            max="2025-12-31"
+            formControlName="availableFrom"
+            ></ion-datetime>
           </ion-item>
-          <ion-item *ngIf="!form.get('dateFrom').valid && form.get('dateFrom').touched" lines="none">
-              <div class="err">
-                This is required
-              </div>
-            </ion-item>
+          <ion-item *ngIf="!form.get('availableFrom').valid && form.get('availableFrom').touched" lines="none">
+            <div class="err">
+              This is required
+            </div>
+          </ion-item>
+          <ion-item *ngIf="!datesValid() && form.controls.availableFrom?.valid && form.controls.availableTo?.dirty" lines="none">
+            <div class="err">
+              The start date must be before the end date
+            </div>
+          </ion-item>
         </ion-col>
         <ion-col size-sm="3">
           <ion-item>
-            <ion-label position="floating" [ngClass]="{'err': !form.get('dateTo').valid && form.get('dateTo').touched}">Available to</ion-label>
-            <ion-datetime min="2019-01-02" max="2025-12-31" formControlName="dateTo"></ion-datetime>
+            <ion-label position="floating" [ngClass]="{'err': (form.controls.availableTo?.invalid || !datesValid() && form.controls.availableFrom?.dirty) && form.controls.availableTo?.touched}">
+              Available to</ion-label>
+            <ion-datetime
+            display-format="YYYY-MM-DD" 
+            picker-format="YYYY MMM DD" 
+            [min]="startDate" 
+            max="2025-12-31" 
+            formControlName="availableTo"
+            ></ion-datetime>
           </ion-item>
-          <ion-item *ngIf="!form.get('dateTo').valid && form.get('dateTo').touched" lines="none">
-              <div class="err">
-                This is required
-              </div>
-            </ion-item>
+          <ion-item *ngIf="!form.get('availableTo').valid && form.get('availableTo').touched" lines="none">
+            <div class="err">
+              This is required
+            </div>
+          </ion-item>
+          <ion-item *ngIf="!datesValid() && form.controls.availableTo?.valid && form.controls.availableFrom?.dirty" lines="none">
+            <div class="err">
+              The end date must be after the start date
+            </div>
+          </ion-item>
         </ion-col>
       </ion-row>
 

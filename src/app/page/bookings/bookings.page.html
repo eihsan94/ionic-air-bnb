@@ -10,9 +10,15 @@
     <ion-title>Your Bookings</ion-title>
   </ion-toolbar>
 </ion-header>
-
+<ion-grid *ngIf="!bookings || bookings.length <= 0">
+  <ion-row>
+    <ion-col size-md="6" offset-md="3" text-center padding>
+      <p>You don't have any booking currently!</p>
+    </ion-col>
+  </ion-row>
+</ion-grid>
 <ion-content padding>
-  <ion-grid>
+  <ion-grid *ngIf="bookings.length > 0">
     <ion-row>
       <ion-col size-md="6" offset-md="3">
           <ion-list>

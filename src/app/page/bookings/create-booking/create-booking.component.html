@@ -1,15 +1,131 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title padding>{{ selectedPlace.title}}</ion-title>  
+    <ion-title padding>{{ selectedPlace.title}}</ion-title>
     <ion-buttons slot="primary">
-      <ion-button color="primary" margin (click)="onCancel()"><ion-icon name="close"></ion-icon></ion-button>
+      <ion-button margin (click)="onCancel()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
     </ion-buttons>
   </ion-toolbar>
 
 </ion-header>
 
 <ion-content text-center padding>
-  <p> {{selectedPlace.description}}</p>
-  <ion-button color="primary" margin (click)="onBookPlace()">Book!</ion-button>
+  <form #f="ngForm" (ngSubmit)="onBookPlace(f)">
+
+    <ion-grid>
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating" [ngClass]="{'err': f.controls.firstname?.invalid && f.controls.firstname?.touched}">First Name</ion-label>
+            <ion-input type="text" ngModel name="firstname" required></ion-input>
+          </ion-item>
+          <ion-item *ngIf="f.controls.firstname?.invalid && f.controls.firstname?.touched" lines="none">
+            <div class="err">
+              This is required
+            </div>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating" [ngClass]="{'err': f.controls.lastName?.invalid && f.controls.lastName?.touched}">Last Name</ion-label>
+            <ion-input type="lastName" ngModel name="lastName" required></ion-input>
+          </ion-item>
+          <ion-item *ngIf="f.controls.lastName?.invalid && f.controls.lastName?.touched" lines="none">
+            <div class="err">
+              This is required
+            </div>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating" [ngClass]="{'err': f.controls.guestNumber?.invalid && f.controls.guestNumber?.touched}">Number of Guests</ion-label>
+            <ion-select [ngModel]="'2'" name="guestNumber" required>
+              <ion-select-option value="1">1</ion-select-option>
+              <ion-select-option value="2">2</ion-select-option>
+              <ion-select-option value="2">3</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item *ngIf="f.controls.guestNumber?.invalid && f.controls.guestNumber?.touched" lines="none">
+            <div class="err">
+              This is required
+            </div>
+          </ion-item>
+        </ion-col>
+      </ion-row> 
+
+      <ion-row>
+        <ion-col size-sm="3" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating" [ngClass]="{'err': (f.controls.date_from?.invalid || !datesValid() && f.controls.date_to?.dirty) && f.controls.date_from?.touched }">From</ion-label>
+            <ion-datetime 
+            display-format="YYYY-MM-DD" 
+            picker-format="YYYY MMM DD" 
+            [min]="selectedPlace.availableFrom.toISOString()" 
+            [max]="selectedPlace.availableTo.toISOString()" 
+            [ngModel]="startDate" 
+            name="date_from" 
+            #startDateCtrl="ngModel"
+              required></ion-datetime>
+          </ion-item>
+          <ion-item *ngIf="f.controls.date_from?.invalid && f.controls.date_from?.touched" lines="none">
+            <div class="err">
+              This is required
+            </div>
+          </ion-item>
+          <ion-item *ngIf="!datesValid() && f.controls.date_from?.valid && f.controls.date_to?.dirty" lines="none">
+              <div class="err">
+                The start date must be before the end date
+              </div>
+            </ion-item>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col size-sm="3">
+          <ion-item>
+            <ion-label position="floating" [ngClass]="{'err': (f.controls.date_to?.invalid || !datesValid() && f.controls.date_from?.dirty) && f.controls.date_to?.touched}">To</ion-label>
+            <ion-datetime 
+            display-format="YYYY-MM-DD" 
+            picker-format="YYYY MMM DD" 
+            [min]="startDateCtrl.value" 
+            [max]="selectedPlace.availableTo.toISOString()" 
+            [ngModel]="endDate" 
+            name="date_to" 
+            required>
+          </ion-datetime>
+          </ion-item>
+          <ion-item *ngIf="f.controls.date_to?.invalid && f.controls.date_to?.touched" lines="none">
+            <div class="err">
+              This is required
+            </div>
+          </ion-item>
+          <ion-item *ngIf="!datesValid() && f.controls.date_to?.valid && f.controls.date_from?.dirty" lines="none">
+            <div class="err">
+              The end date must be after the start date
+            </div>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-button [disabled]="f.invalid || !datesValid()" color="primary" type="submit" expand="block" type="submit">
+            Book!
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+  </form>
 
 </ion-content>
