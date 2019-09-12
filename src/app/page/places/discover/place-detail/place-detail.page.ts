@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { NavController, ModalController, ActionSheetController, LoadingController } from '@ionic/angular';
-import { ActivatedRoute } from '@angular/router';
+import { NavController, ModalController, ActionSheetController, LoadingController, AlertController } from '@ionic/angular';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PlacesService } from '../../places.service';
 import { Place } from '../../place';
 import { ModalOptions } from '@ionic/core';
@@ -18,6 +18,7 @@ import { AuthService } from 'src/app/page/auth/auth.service';
 export class PlaceDetailPage implements OnInit, OnDestroy {
   place: Place;
   isBookable: boolean;
+  isLoading = false;
   private _placesSub = new Subscription();
 
   constructor(
@@ -28,17 +29,39 @@ export class PlaceDetailPage implements OnInit, OnDestroy {
     private modalCtrl: ModalController,
     private actionSheetCtrl: ActionSheetController,
     private bookingsService: BookingsService,
-    public loadingCtrl: LoadingController,
+    private loadingCtrl: LoadingController,
+    private alertCtrl: AlertController,
+    private router: Router,
+
   ) { }
 
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe(
-      paramMap =>
-      !paramMap.has('placeId') ? this.navCtrl.navigateBack('/places/tabs/discover') :
-      this._placesSub.add(this.placesService.getPlace(paramMap.get('placeId')).subscribe( p => {
-        this.place = p;
-        this.isBookable = p.userId !== this.authService.userId;
-      }))
+      paramMap => {
+        this.isLoading = true;
+        !paramMap.has('placeId') ? this.navCtrl.navigateBack('/places/tabs/discover') :
+        this._placesSub.add(this.placesService.getPlace(paramMap.get('placeId')).subscribe( p => {
+          this.place = p;
+          this.isBookable = p.userId !== this.authService.userId;
+          this.isLoading = false;
+        },
+        err => {
+          this.alertCtrl.create({
+            header: 'An Error Occured!',
+            message: 'Data could not be fetched, Please try again later!',
+            buttons: [{
+              text: 'Okay',
+              handler: () => {
+                this.router.navigateByUrl('/places/tabs/discover');
+              }
+            }],
+          })
+          .then(alertEl => {
+            alertEl.present();
+          })
+        }
+        ))
+      }
     );
   }
 

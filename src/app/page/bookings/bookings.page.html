@@ -4,40 +4,43 @@
       <!-- open menu using button -->
       <!-- <ion-button (click)="openMenu()">open</ion-button> -->
       <ion-menu-button>
-        <ion-icon  name="menu"></ion-icon>
+        <ion-icon name="menu"></ion-icon>
       </ion-menu-button>
     </ion-buttons>
     <ion-title>Your Bookings</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-grid *ngIf="!bookings || bookings.length <= 0">
-  <ion-row>
-    <ion-col size-md="6" offset-md="3" text-center padding>
-      <p>You don't have any booking currently!</p>
-    </ion-col>
-  </ion-row>
-</ion-grid>
+
 <ion-content padding>
-  <ion-grid *ngIf="bookings.length > 0">
+  <ion-grid>
     <ion-row>
-      <ion-col size-md="6" offset-md="3">
-          <ion-list>
-              <ion-item-sliding *ngFor="let booking of bookings" #bookingSlider>
-                <ion-item>
-                  <ion-label>
-                    <h5>{{booking.placeTitle}}</h5>
-                    <p>Guests: {{booking.guestNumber}}</p>
-                  </ion-label>
-                </ion-item>
-                <ion-item-options side="end">
-                  <ion-item-option color="danger" (click)="onBookingCancel(booking.id, bookingSlider)">
-                    <ion-icon slot="icon-only" name="trash"></ion-icon>
-                  </ion-item-option>
-                </ion-item-options>
-              </ion-item-sliding>
-            </ion-list>
+      <ion-col size-md="6" offset-md="3" text-center padding *ngIf="isLoading">
+        <ion-spinner color="primary"></ion-spinner>
+      </ion-col>
+      <ion-col size-md="6" offset-md="3" text-center padding *ngIf="!isLoading && (!bookings || bookings.length <= 0)">
+        <p>You don't have any booking currently!</p>
+      </ion-col>
+      <ion-col size-md="6" offset-md="3" *ngIf="!isLoading && bookings.length > 0">
+        <ion-list>
+          <ion-item-sliding *ngFor="let booking of bookings" #bookingSlider>
+            <ion-item>
+              <ion-avatar slot="start">
+                <img [src]="booking.placeImage" />
+              </ion-avatar>
+              <ion-label>
+                <h5>{{booking.placeTitle}}</h5>
+                <p>Guests: {{booking.guestNumber}}</p>
+              </ion-label>
+            </ion-item>
+            <ion-item-options side="end">
+              <ion-item-option color="danger" (click)="onBookingCancel(booking.id, bookingSlider)">
+                <ion-icon slot="icon-only" name="trash"></ion-icon>
+              </ion-item-option>
+            </ion-item-options>
+          </ion-item-sliding>
+        </ion-list>
       </ion-col>
     </ion-row>
   </ion-grid>
-  
+
 </ion-content>
