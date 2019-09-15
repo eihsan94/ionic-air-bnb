@@ -11,8 +11,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IonicStorageModule } from '@ionic/storage';
-import { HttpReqInterceptorService } from './shared-service/http-req-interceptor.service';
-import { HttpErrorHandlerService } from './shared-service/handle-error.service';
+import { HttpReqInterceptorService } from './shared/services/http-req-interceptor.service';
+import { HttpErrorHandlerService } from './shared/services/handle-error.service';
 
 @NgModule({
   declarations: [AppComponent],

@@ -34,7 +34,6 @@ export class BookingsService {
 
   addBooking(booking: Booking): Observable <any> {
     let generatedID;
-    console.table('saving this booking', booking);
     return this.authService.userId.pipe(
       take(1),
       switchMap(userId => {

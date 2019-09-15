@@ -4,7 +4,7 @@ import { Observable, pipe } from 'rxjs';
 import { tap, take, switchMap } from 'rxjs/operators';
 import { HttpErrorHandlerService } from './handle-error.service';
 import { LoadingService } from './loading.service';
-import { AuthService } from '../page/auth/auth.service';
+import { AuthService } from '../../page/auth/auth.service';
 
 @Injectable({
   providedIn: 'root'
