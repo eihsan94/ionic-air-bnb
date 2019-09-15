@@ -1,0 +1,95 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:2:1-16:12
+	xmlns:amazon
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:4:1-57
+	package
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:2:11-46
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:2:1-16:12
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:2:1-16:12
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:3:1-59
+application
+ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:5:1-11:15
+provider#org.apache.cordova.camera.FileProvider
+ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:6:1-8:12
+	android:grantUriPermissions
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:6:138-172
+	android:authorities
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:6:65-112
+	android:exported
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:6:113-137
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:6:11-64
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:7:3-112
+	android:resource
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:7:65-110
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:7:14-64
+activity#com.google.zxing.client.android.CaptureActivity
+ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:9:1-302
+	android:clearTaskOnLaunch
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:9:74-106
+	android:windowSoftInputMode
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:9:228-275
+	android:exported
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:9:276-300
+	android:configChanges
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:9:107-168
+	android:theme
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:9:169-227
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:9:11-73
+activity#com.google.zxing.client.android.encode.EncodeActivity
+ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:10:1-103
+	android:label
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:10:80-101
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:10:11-79
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:12:1-76
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:12:18-74
+uses-permission#android.permission.CAMERA
+ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:13:1-60
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:13:18-58
+uses-permission#android.permission.FLASHLIGHT
+ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:14:1-64
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:14:18-62
+uses-feature#android.hardware.camera
+ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:15:1-79
+	android:required
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:15:54-77
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml:15:15-53
+uses-sdk
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/src/main/AndroidManifest.xml

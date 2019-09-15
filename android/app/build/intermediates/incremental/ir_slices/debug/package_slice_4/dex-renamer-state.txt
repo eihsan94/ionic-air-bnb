@@ -1,0 +1,4 @@
+#Fri Sep 13 10:10:52 JST 2019
+base.0=/Users/bw0021/Desktop/air-bnb/android/app/build/intermediates/transforms/dexMerger/debug/4
+path.0=classes.dex
+renamed.0=classes.dex

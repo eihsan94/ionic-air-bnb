@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Booking } from './booking';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { AuthService } from '../auth/auth.service';
-import { take, tap, delay, switchMap, map } from 'rxjs/operators';
+import { take, tap, delay, switchMap, map, switchMapTo } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 
 interface BookingData {
@@ -34,43 +34,48 @@ export class BookingsService {
 
   addBooking(booking: Booking): Observable <any> {
     let generatedID;
-    booking.userId = this.authService.userId;
-    return this.http.post<{name: string}>('https://ionic-base-app-7888a.firebaseio.com/bookings.json', {...booking, id: null})
-    .pipe(
-      switchMap(resData => {
-        generatedID = resData.name; // unique id returned from firebase
-        return this.bookings;
-      }), // the http req will return the name observable so we change that return to place observable here
+    console.table('saving this booking', booking);
+    return this.authService.userId.pipe(
       take(1),
-      tap(b => {
-        booking.id = generatedID;
-        return this._bookings.next(b.concat(booking));
+      switchMap(userId => {
+        booking.userId = userId;
+        if (!userId ) {
+          throw new Error('No Id found!');
+        }
+        return this.http.post<{name: string}>('https://ionic-base-app-7888a.firebaseio.com/bookings.json', {...booking, id: null})
+        .pipe(
+          switchMap(resData => {
+            generatedID = resData.name; // unique id returned from firebase
+            return this.bookings;
+          }), // the http req will return the name observable so we change that return to place observable here
+          take(1),
+          tap(b => {
+            booking.id = generatedID;
+            return this._bookings.next(b.concat(booking));
+          })
+        ); // we use tap because we want to run the fn without completing the subs)
       })
-    ); // we use tap because we want to run the fn without completing the subs)
+    );
   }
 
   cancelBooking(bookingId: string): Observable < any > {
-    return this.http.delete(`https://ionic-base-app-7888a.firebaseio.com/bookings/${bookingId}.json`).pipe(
+      return this.http.delete(`https://ionic-base-app-7888a.firebaseio.com/bookings/${bookingId}.json`).pipe(
       switchMap(() => this.bookings),
       take(1),
       tap(p =>  {
         const latestBookings = p.filter(pl => pl.id !== bookingId);
         this._bookings.next(latestBookings);
       })
-    )
-    return this.bookings.pipe(
-      take(1),
-      delay(1000),
-      tap(p =>  {
-        const latestBookings = p.filter(pl => pl.id !== bookingId);
-        this._bookings.next(latestBookings);
-      })
     );
+
   }
 
-  fetchBookings() {
-    return this.http.get<{[key: string]: BookingData}>(`https://ionic-base-app-7888a.firebaseio.com/bookings.json?orderBy="userId"&equalTo="${this.authService.userId}"`)
-    .pipe(
+  fetchBookings(): Observable < Booking[] >  {
+    return this.authService.userId.pipe(
+      take(1),
+      switchMap(userId => this.http.get< {[key: string]: BookingData} >
+        (`https://ionic-base-app-7888a.firebaseio.com/bookings.json?orderBy="userId"&equalTo="${userId}"`)
+      ),
       map(resData => {
         const bookings = [];
         for (const key in resData) {

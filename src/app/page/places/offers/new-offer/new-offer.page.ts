@@ -1,9 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { PlacesService } from '../../places.service';
-import { Place } from '../../place';
 import { Router } from '@angular/router';
-import { LoadingController } from '@ionic/angular';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -19,7 +17,6 @@ export class NewOfferPage implements OnInit, OnDestroy {
   constructor(
     private placeService: PlacesService,
     private router: Router,
-    private loadingCtrl: LoadingController
   ) { }
 
   ngOnInit() {
@@ -61,16 +58,9 @@ export class NewOfferPage implements OnInit, OnDestroy {
     if (!this.form.valid) {
       return;
     }
-    this.loadingCtrl.create({
-      message: 'Creating offer...'
-    })
-    .then(loadingEl => {
-      loadingEl.present();
-      this.placeService.addPlace(this.form.value).subscribe(() => { // we dont need to clear this subs because the observable use take(1)
-        this.form.reset();
-        this.router.navigateByUrl('/places/tabs/offers');
-        this.loadingCtrl.dismiss();
-      });
+    this.placeService.addPlace(this.form.value).subscribe(() => { // we dont need to clear this subs because the observable use take(1)
+      this.form.reset();
+      this.router.navigateByUrl('/places/tabs/offers');
     });
   }
 

@@ -29,9 +29,13 @@ export class OffersPage implements OnInit, OnDestroy {
     this._placesSub.add(this.placesService.fetchPlaces().subscribe(() => this.isLoading = false));
   }
 
-  onEdit(offerId: string, slidingItem: IonItemSliding) {
-    slidingItem.close();
+  onEdit(offerId: string, sliderEl: IonItemSliding) {
+    sliderEl.close();
     this.router.navigateByUrl(`/places/tabs/offers/edit/${offerId}`);
+  }
+
+  onDelete(offerId: string, sliderEl: IonItemSliding) {
+    this.placesService.deletePlace(offerId).subscribe(() => sliderEl.close());
   }
 
   ngOnDestroy() {

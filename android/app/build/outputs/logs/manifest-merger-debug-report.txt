@@ -1,0 +1,464 @@
+-- Merging decision tree log ---
+provider#android.support.v4.content.FileProvider
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:34:9-42:20
+	android:grantUriPermissions
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:38:13-47
+	android:authorities
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:36:13-64
+	android:exported
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:37:13-37
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:35:13-67
+manifest
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:2:1-63:12
+MERGED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-43:12
+MERGED from [:barcodescanner-release-2.1.5:] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/585c69644d9768a919d0f3d36bf598f1/AndroidManifest.xml:2:1-14:12
+MERGED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-36:12
+MERGED from [com.android.support:design:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/c6636a2c5768fd06d14bcfa7762db624/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/f0e5d160f6c981f47ed0c4f4c10267f4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-messaging:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/fe8663a018bf0e43cba7c5da655f6280/AndroidManifest.xml:17:1-37:12
+MERGED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:17:1-47:12
+MERGED from [com.google.firebase:firebase-common:17.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/a1e01f9975ac74cf95a7947958d2c38d/AndroidManifest.xml:2:1-19:12
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/da0de5e91924e3a7066af662fb34181b/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/00a3ca88ceadc7885288b6744fd251e3/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/a313397ba4930821abf4bf8dd2357ebf/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0c7fab6e2e45cedc9df803ab95e58552/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/ec4ae6e72193c898249223ca20d786f8/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/040ca239ab43748f4a204437102ecd08/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:27.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/15e3dfaf6fadc944fb639a3c646f6d47/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/3a05e1563750db1228eddbc14d2f7da1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/f22e6d92b651fa3e0faee6344f049e2b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customtabs:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/599700569c18bafec0baf633252ca373/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/ea8f7ff2e19adcf692d31653d4f5e54e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/63420be426a89550b4060d12e47cb04e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/9294b5edfeb3ee18447827276c15173d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/2146c58462a4f358c42ca97e334a5029/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/3043326930a770bf368aba4776968f77/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/f25e2724c7ed6d1bcd5f4713a7ada83f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/1db034c9436806a4dd1ae0c4193d838d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/98e86e6c6f263e024dcc3c71d510ca62/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/369fc7555c3553adf8541bee43341acb/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/6024c72355e15df159cf28f6f842a41a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/8138625120278fdc1571475110e8e422/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/c79807ba54286dd6a6d356509e4c1764/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/e38abd11b13ddd2f61cbb53568b6554b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/3644c768fdbdd426dd5a26bd1fbd8547/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/18e3191ed9ad1cf367fa114aca670d25/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/6f147f089b493812219ef2c8c5f1a07f/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/9999df8ec03291cd106b3987bc907244/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/513d4759a6a973779b115a12da01dfff/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/ab1a3aebf60651f14d43922433c536ba/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/d7fe715b97b477a8c97ba2a7482a7c50/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/752c0a05242d651bc2051600b3287821/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/d8f3bc78b92df64787af3c64b46c236e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/ebb99f9056cdc4b1fc5126ff68426161/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/e64bd8fcc9dede059e585dc44be02d84/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/4b5860f19f5fa57d363256a4889bdf33/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/35fe4d25868964909cfb474a176ebfea/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/eebd522302f19f09e0c3a6da5a5d200c/AndroidManifest.xml:17:1-22:12
+MERGED from [org.apache.cordova:framework:7.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/433c21d0fcde15c73c396f4e6d31750f/AndroidManifest.xml:20:1-27:12
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:2:1-63:12
+	package
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:3:5-31
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:2:1-63:12
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:2:1-63:12
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:5:5-43:19
+MERGED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:5-41:19
+MERGED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:5-41:19
+MERGED from [:barcodescanner-release-2.1.5:] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/585c69644d9768a919d0f3d36bf598f1/AndroidManifest.xml:11:5-12:19
+MERGED from [:barcodescanner-release-2.1.5:] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/585c69644d9768a919d0f3d36bf598f1/AndroidManifest.xml:11:5-12:19
+MERGED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-34:19
+MERGED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-34:19
+MERGED from [com.android.support:design:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/c6636a2c5768fd06d14bcfa7762db624/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/c6636a2c5768fd06d14bcfa7762db624/AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-messaging:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/fe8663a018bf0e43cba7c5da655f6280/AndroidManifest.xml:22:5-35:19
+MERGED from [com.google.firebase:firebase-messaging:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/fe8663a018bf0e43cba7c5da655f6280/AndroidManifest.xml:22:5-35:19
+MERGED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:28:5-45:19
+MERGED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:28:5-45:19
+MERGED from [com.google.firebase:firebase-common:17.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/a1e01f9975ac74cf95a7947958d2c38d/AndroidManifest.xml:11:5-17:19
+MERGED from [com.google.firebase:firebase-common:17.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/a1e01f9975ac74cf95a7947958d2c38d/AndroidManifest.xml:11:5-17:19
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/da0de5e91924e3a7066af662fb34181b/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/da0de5e91924e3a7066af662fb34181b/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/00a3ca88ceadc7885288b6744fd251e3/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/00a3ca88ceadc7885288b6744fd251e3/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/a313397ba4930821abf4bf8dd2357ebf/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/a313397ba4930821abf4bf8dd2357ebf/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0c7fab6e2e45cedc9df803ab95e58552/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0c7fab6e2e45cedc9df803ab95e58552/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/ec4ae6e72193c898249223ca20d786f8/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/ec4ae6e72193c898249223ca20d786f8/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/040ca239ab43748f4a204437102ecd08/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/040ca239ab43748f4a204437102ecd08/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-compat:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/18e3191ed9ad1cf367fa114aca670d25/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/18e3191ed9ad1cf367fa114aca670d25/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/6f147f089b493812219ef2c8c5f1a07f/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/6f147f089b493812219ef2c8c5f1a07f/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/18e3191ed9ad1cf367fa114aca670d25/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:11:9-40
+activity#io.ionic.starter.MainActivity
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:13:9-32:20
+	android:label
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:16:13-56
+	android:launchMode
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:18:13-44
+	android:configChanges
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:14:13-90
+	android:theme
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:17:13-62
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:15:13-57
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:20:13-23:29
+action#android.intent.action.MAIN
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:22:17-77
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:22:27-74
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:@string/custom_url_scheme
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:25:13-30:29
+action#android.intent.action.VIEW
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:26:17-69
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:26:25-66
+category#android.intent.category.DEFAULT
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:27:17-76
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:27:27-73
+category#android.intent.category.BROWSABLE
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:28:17-78
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:28:27-75
+data
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:29:17-68
+	android:scheme
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:29:23-65
+uses-permission#android.permission.INTERNET
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:47:5-67
+MERGED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:47:22-64
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:49:5-79
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:49:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:50:5-81
+MERGED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-81
+MERGED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:50:22-78
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:52:5-81
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:52:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:53:5-79
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:53:22-76
+uses-feature#android.hardware.location.gps
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:54:5-66
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:54:19-63
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:56:5-79
+MERGED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:56:22-76
+uses-permission#android.permission.CAMERA
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:59:5-65
+MERGED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-65
+MERGED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-65
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:59:22-62
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:61:5-71
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:61:22-68
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:62:5-79
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:62:22-77
+uses-sdk
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml
+MERGED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
+MERGED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
+MERGED from [:barcodescanner-release-2.1.5:] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/585c69644d9768a919d0f3d36bf598f1/AndroidManifest.xml:7:5-9:41
+MERGED from [:barcodescanner-release-2.1.5:] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/585c69644d9768a919d0f3d36bf598f1/AndroidManifest.xml:7:5-9:41
+MERGED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/c6636a2c5768fd06d14bcfa7762db624/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/c6636a2c5768fd06d14bcfa7762db624/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/f0e5d160f6c981f47ed0c4f4c10267f4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/f0e5d160f6c981f47ed0c4f4c10267f4/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/fe8663a018bf0e43cba7c5da655f6280/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/fe8663a018bf0e43cba7c5da655f6280/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common:17.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/a1e01f9975ac74cf95a7947958d2c38d/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-common:17.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/a1e01f9975ac74cf95a7947958d2c38d/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/da0de5e91924e3a7066af662fb34181b/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/da0de5e91924e3a7066af662fb34181b/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/00a3ca88ceadc7885288b6744fd251e3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/00a3ca88ceadc7885288b6744fd251e3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/a313397ba4930821abf4bf8dd2357ebf/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/a313397ba4930821abf4bf8dd2357ebf/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0c7fab6e2e45cedc9df803ab95e58552/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0c7fab6e2e45cedc9df803ab95e58552/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/ec4ae6e72193c898249223ca20d786f8/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/ec4ae6e72193c898249223ca20d786f8/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/040ca239ab43748f4a204437102ecd08/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/040ca239ab43748f4a204437102ecd08/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/15e3dfaf6fadc944fb639a3c646f6d47/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/15e3dfaf6fadc944fb639a3c646f6d47/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/3a05e1563750db1228eddbc14d2f7da1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/3a05e1563750db1228eddbc14d2f7da1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/f22e6d92b651fa3e0faee6344f049e2b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/f22e6d92b651fa3e0faee6344f049e2b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/599700569c18bafec0baf633252ca373/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/599700569c18bafec0baf633252ca373/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/ea8f7ff2e19adcf692d31653d4f5e54e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/ea8f7ff2e19adcf692d31653d4f5e54e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/63420be426a89550b4060d12e47cb04e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/63420be426a89550b4060d12e47cb04e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/9294b5edfeb3ee18447827276c15173d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/9294b5edfeb3ee18447827276c15173d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/2146c58462a4f358c42ca97e334a5029/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/2146c58462a4f358c42ca97e334a5029/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/3043326930a770bf368aba4776968f77/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/3043326930a770bf368aba4776968f77/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/f25e2724c7ed6d1bcd5f4713a7ada83f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/f25e2724c7ed6d1bcd5f4713a7ada83f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/1db034c9436806a4dd1ae0c4193d838d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/1db034c9436806a4dd1ae0c4193d838d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/98e86e6c6f263e024dcc3c71d510ca62/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/98e86e6c6f263e024dcc3c71d510ca62/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/369fc7555c3553adf8541bee43341acb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/369fc7555c3553adf8541bee43341acb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/6024c72355e15df159cf28f6f842a41a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/6024c72355e15df159cf28f6f842a41a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/8138625120278fdc1571475110e8e422/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/8138625120278fdc1571475110e8e422/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/c79807ba54286dd6a6d356509e4c1764/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/c79807ba54286dd6a6d356509e4c1764/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/e38abd11b13ddd2f61cbb53568b6554b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/e38abd11b13ddd2f61cbb53568b6554b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/3644c768fdbdd426dd5a26bd1fbd8547/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/3644c768fdbdd426dd5a26bd1fbd8547/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/18e3191ed9ad1cf367fa114aca670d25/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/18e3191ed9ad1cf367fa114aca670d25/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/6f147f089b493812219ef2c8c5f1a07f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/6f147f089b493812219ef2c8c5f1a07f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/9999df8ec03291cd106b3987bc907244/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/9999df8ec03291cd106b3987bc907244/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/513d4759a6a973779b115a12da01dfff/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/513d4759a6a973779b115a12da01dfff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/ab1a3aebf60651f14d43922433c536ba/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/ab1a3aebf60651f14d43922433c536ba/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/d7fe715b97b477a8c97ba2a7482a7c50/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/d7fe715b97b477a8c97ba2a7482a7c50/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/752c0a05242d651bc2051600b3287821/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/752c0a05242d651bc2051600b3287821/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/d8f3bc78b92df64787af3c64b46c236e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/d8f3bc78b92df64787af3c64b46c236e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/ebb99f9056cdc4b1fc5126ff68426161/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/ebb99f9056cdc4b1fc5126ff68426161/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/e64bd8fcc9dede059e585dc44be02d84/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/e64bd8fcc9dede059e585dc44be02d84/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/4b5860f19f5fa57d363256a4889bdf33/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/4b5860f19f5fa57d363256a4889bdf33/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/35fe4d25868964909cfb474a176ebfea/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/35fe4d25868964909cfb474a176ebfea/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/eebd522302f19f09e0c3a6da5a5d200c/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/eebd522302f19f09e0c3a6da5a5d200c/AndroidManifest.xml:20:5-44
+MERGED from [org.apache.cordova:framework:7.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/433c21d0fcde15c73c396f4e6d31750f/AndroidManifest.xml:25:5-44
+MERGED from [org.apache.cordova:framework:7.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/433c21d0fcde15c73c396f4e6d31750f/AndroidManifest.xml:25:5-44
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:39:13-41:64
+	android:resource
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:41:17-51
+	android:name
+		ADDED from /Users/bw0021/Desktop/air-bnb/android/app/src/main/AndroidManifest.xml:40:17-67
+uses-permission#android.permission.FLASHLIGHT
+ADDED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-69
+	android:name
+		ADDED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:22-66
+uses-feature#android.hardware.camera
+ADDED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:5-18:35
+MERGED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-13:36
+MERGED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-13:36
+	android:required
+		ADDED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:9-32
+	android:name
+		ADDED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:9-47
+provider#org.apache.cordova.camera.FileProvider
+ADDED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:9-29:20
+	android:grantUriPermissions
+		ADDED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:13-47
+	android:authorities
+		ADDED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-60
+	android:exported
+		ADDED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-37
+	android:name
+		ADDED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:13-66
+activity#com.google.zxing.client.android.CaptureActivity
+ADDED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:31:9-37:63
+	android:clearTaskOnLaunch
+		ADDED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:33:13-45
+	android:windowSoftInputMode
+		ADDED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:37:13-60
+	android:exported
+		ADDED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:35:13-37
+	android:configChanges
+		ADDED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:34:13-74
+	android:theme
+		ADDED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:36:13-71
+	android:name
+		ADDED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:32:13-75
+activity#com.google.zxing.client.android.encode.EncodeActivity
+ADDED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:38:9-40:37
+	android:label
+		ADDED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:40:13-34
+	android:name
+		ADDED from [:capacitor-cordova-android-plugins] /Users/bw0021/Desktop/air-bnb/android/capacitor-cordova-android-plugins/build/intermediates/library_manifest/debug/AndroidManifest.xml:39:13-81
+service#com.getcapacitor.plugin.background.BackgroundTaskService
+ADDED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-18:40
+	android:exported
+		ADDED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-37
+	android:name
+		ADDED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-84
+receiver#com.getcapacitor.plugin.notification.TimedNotificationPublisher
+ADDED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:9-100
+	android:name
+		ADDED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:19-97
+receiver#com.getcapacitor.plugin.notification.NotificationDismissReceiver
+ADDED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:9-101
+	android:name
+		ADDED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:19-98
+meta-data#firebase_messaging_auto_init_enabled
+ADDED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:9-25:37
+	android:value
+		ADDED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:13-34
+	android:name
+		ADDED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:13-64
+service#com.getcapacitor.CapacitorFirebaseMessagingService
+ADDED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:27:9-33:19
+	android:stopWithTask
+		ADDED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:13-41
+	android:name
+		ADDED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:28:13-78
+intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
+ADDED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:30:13-32:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:31:17-78
+	android:name
+		ADDED from [:capacitor-android] /Users/bw0021/Desktop/air-bnb/node_modules/@capacitor/android/capacitor/build/intermediates/library_manifest/debug/AndroidManifest.xml:31:25-75
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/fe8663a018bf0e43cba7c5da655f6280/AndroidManifest.xml:28:9-34:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/fe8663a018bf0e43cba7c5da655f6280/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/fe8663a018bf0e43cba7c5da655f6280/AndroidManifest.xml:29:13-82
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:24:5-68
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:24:22-65
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:26:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:26:22-79
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:29:9-35:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:30:13-84
+meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
+ADDED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:33:17-96
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:37:9-44:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:39:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:40:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:38:13-78
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:41:13-43:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:42:17-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:18.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/0a3e38f9393382c99ca155cb4d83933c/AndroidManifest.xml:42:25-78
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:17.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/a1e01f9975ac74cf95a7947958d2c38d/AndroidManifest.xml:12:9-16:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:17.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/a1e01f9975ac74cf95a7947958d2c38d/AndroidManifest.xml:14:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:17.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/a1e01f9975ac74cf95a7947958d2c38d/AndroidManifest.xml:15:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:17.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/a1e01f9975ac74cf95a7947958d2c38d/AndroidManifest.xml:16:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:17.0.0] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/a1e01f9975ac74cf95a7947958d2c38d/AndroidManifest.xml:13:13-77
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/00a3ca88ceadc7885288b6744fd251e3/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/00a3ca88ceadc7885288b6744fd251e3/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/00a3ca88ceadc7885288b6744fd251e3/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/00a3ca88ceadc7885288b6744fd251e3/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/040ca239ab43748f4a204437102ecd08/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/040ca239ab43748f4a204437102ecd08/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /Users/bw0021/.gradle/caches/transforms-2/files-2.1/040ca239ab43748f4a204437102ecd08/AndroidManifest.xml:24:13-58

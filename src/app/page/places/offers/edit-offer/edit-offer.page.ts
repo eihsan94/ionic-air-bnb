@@ -23,8 +23,7 @@ export class EditOfferPage implements OnInit, OnDestroy {
     private activatedRoute: ActivatedRoute,
     private placesService: PlacesService,
     private router: Router,
-    private loadingCtrl: LoadingController,
-    private alertCtrl : AlertController,
+    private alertCtrl: AlertController,
     ) { }
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe(
@@ -53,22 +52,6 @@ export class EditOfferPage implements OnInit, OnDestroy {
             }),
           });
           this.isLoading = false;
-        },
-        err => {
-          this.alertCtrl.create({
-            header: 'An Error Occured!',
-            message: 'Data could not be fetched, Please try again later!',
-            buttons: [{
-              text: 'Okay',
-              handler: () => {
-                this.router.navigateByUrl('/places/tabs/offers');
-              }
-            }],
-          })
-          .then(alertEl => {
-            alertEl.present();
-            
-          })
         }));
       }
     );
@@ -78,15 +61,9 @@ export class EditOfferPage implements OnInit, OnDestroy {
     if (!this.form.valid) {
       return;
     }
-    this.loadingCtrl.create({
-      message: 'updating offer...'
-    }).then(loadingEl => {
-      loadingEl.present();
-      this.placesService.updateOffer(this.place.id, this.form.value.title, this.form.value.description).subscribe(() => {
-        this.form.reset();
-        this.router.navigateByUrl('/places/tabs/offers');
-        loadingEl.dismiss();
-      });
+    this.placesService.updateOffer(this.place.id, this.form.value.title, this.form.value.description).subscribe(() => {
+      this.form.reset();
+      this.router.navigateByUrl('/places/tabs/offers');
     });
   }
 

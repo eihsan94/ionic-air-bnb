@@ -15,7 +15,6 @@ export class BookingsPage implements OnInit, OnDestroy {
   private _subs = new Subscription();
   constructor(
     private bookingsService: BookingsService,
-    private loadingCtrl: LoadingController,
   ) { }
 
   ngOnInit() {
@@ -26,15 +25,7 @@ export class BookingsPage implements OnInit, OnDestroy {
     this._subs.add(this.bookingsService.fetchBookings().subscribe(() => this.isLoading = false));
   }
   onBookingCancel(bookingId: string, sliderEl: IonItemSliding) {
-    sliderEl.close();
-    this.loadingCtrl.create({
-      message: 'canceling  booking...'
-    }).then(loadingEl => {
-      loadingEl.present();
-      this.bookingsService.cancelBooking(bookingId).subscribe(() => {
-        loadingEl.dismiss();
-      });
-    });
+    this.bookingsService.cancelBooking(bookingId).subscribe(() => sliderEl.close());
   }
 
   ngOnDestroy() {

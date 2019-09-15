@@ -18,10 +18,10 @@
       <ion-row>
         <ion-col size-sm="6" offset-sm="3">
           <ion-item>
-            <ion-label position="floating" [ngClass]="{'err': f.controls.firstname?.invalid && f.controls.firstname?.touched}">First Name</ion-label>
-            <ion-input type="text" ngModel name="firstname" required></ion-input>
+            <ion-label position="floating" [ngClass]="{'err': f.controls.firstName?.invalid && f.controls.firstName?.touched}">First Name</ion-label>
+            <ion-input type="text" ngModel name="firstName" required></ion-input>
           </ion-item>
-          <ion-item *ngIf="f.controls.firstname?.invalid && f.controls.firstname?.touched" lines="none">
+          <ion-item *ngIf="f.controls.firstName?.invalid && f.controls.firstName?.touched" lines="none">
             <div class="err">
               This is required
             </div>
@@ -64,23 +64,23 @@
       <ion-row>
         <ion-col size-sm="3" offset-sm="3">
           <ion-item>
-            <ion-label position="floating" [ngClass]="{'err': (f.controls.date_from?.invalid || !datesValid() && f.controls.date_to?.dirty) && f.controls.date_from?.touched }">From</ion-label>
+            <ion-label position="floating" [ngClass]="{'err': (f.controls.bookedFrom?.invalid || !datesValid() && f.controls.bookedTo?.dirty) && f.controls.bookedFrom?.touched }">From</ion-label>
             <ion-datetime 
             display-format="YYYY-MM-DD" 
             picker-format="YYYY MMM DD" 
             [min]="selectedPlace.availableFrom.toISOString()" 
             [max]="selectedPlace.availableTo.toISOString()" 
             [ngModel]="startDate" 
-            name="date_from" 
+            name="bookedFrom" 
             #startDateCtrl="ngModel"
               required></ion-datetime>
           </ion-item>
-          <ion-item *ngIf="f.controls.date_from?.invalid && f.controls.date_from?.touched" lines="none">
+          <ion-item *ngIf="f.controls.bookedFrom?.invalid && f.controls.bookedFrom?.touched" lines="none">
             <div class="err">
               This is required
             </div>
           </ion-item>
-          <ion-item *ngIf="!datesValid() && f.controls.date_from?.valid && f.controls.date_to?.dirty" lines="none">
+          <ion-item *ngIf="!datesValid() && f.controls.bookedFrom?.valid && f.controls.bookedTo?.dirty" lines="none">
               <div class="err">
                 The start date must be before the end date
               </div>
@@ -91,23 +91,23 @@
       <ion-row>
         <ion-col size-sm="3">
           <ion-item>
-            <ion-label position="floating" [ngClass]="{'err': (f.controls.date_to?.invalid || !datesValid() && f.controls.date_from?.dirty) && f.controls.date_to?.touched}">To</ion-label>
+            <ion-label position="floating" [ngClass]="{'err': (f.controls.bookedTo?.invalid || !datesValid() && f.controls.bookedFrom?.dirty) && f.controls.bookedTo?.touched}">To</ion-label>
             <ion-datetime 
             display-format="YYYY-MM-DD" 
             picker-format="YYYY MMM DD" 
             [min]="startDateCtrl.value" 
             [max]="selectedPlace.availableTo.toISOString()" 
             [ngModel]="endDate" 
-            name="date_to" 
+            name="bookedTo" 
             required>
           </ion-datetime>
           </ion-item>
-          <ion-item *ngIf="f.controls.date_to?.invalid && f.controls.date_to?.touched" lines="none">
+          <ion-item *ngIf="f.controls.bookedTo?.invalid && f.controls.bookedTo?.touched" lines="none">
             <div class="err">
               This is required
             </div>
           </ion-item>
-          <ion-item *ngIf="!datesValid() && f.controls.date_to?.valid && f.controls.date_from?.dirty" lines="none">
+          <ion-item *ngIf="!datesValid() && f.controls.bookedTo?.valid && f.controls.bookedFrom?.dirty" lines="none">
             <div class="err">
               The end date must be after the start date
             </div>

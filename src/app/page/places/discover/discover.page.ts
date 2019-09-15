@@ -5,6 +5,7 @@ import { MenuController } from '@ionic/angular';
 import { SegmentChangeEventDetail } from '@ionic/core';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../../auth/auth.service';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-discover',
@@ -40,12 +41,14 @@ export class DiscoverPage implements OnInit, OnDestroy {
   }
 
   onFilterUpdate(event: CustomEvent<SegmentChangeEventDetail>) {
-    if (event.detail.value === 'all') {
-      this.relevantPlaces = this.loadedPlaces;
-    } else {
-      this.relevantPlaces = this.loadedPlaces.filter(p => p.userId !== this.authService.userId);
-    }
-    this.listedLoadedPlaces = this.relevantPlaces.slice(1);
+    this.authService.userId.pipe(take(1)).subscribe(userId => {
+      if (event.detail.value === 'all') {
+        this.relevantPlaces = this.loadedPlaces;
+      } else {
+        this.relevantPlaces = this.loadedPlaces.filter(p => p.userId !== userId);
+      }
+      this.listedLoadedPlaces = this.relevantPlaces.slice(1);
+    });
 
   }
 

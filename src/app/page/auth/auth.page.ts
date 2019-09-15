@@ -1,8 +1,9 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { AuthService } from './auth.service';
+import { Component, OnInit } from '@angular/core';
+import { AuthService, AuthResData } from './auth.service';
 import { Router } from '@angular/router';
-import { LoadingController } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
 import { NgForm } from '@angular/forms';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-auth',
@@ -16,38 +17,22 @@ export class AuthPage implements OnInit {
   constructor(
     private authService: AuthService,
     private router: Router,
-    private loadingCtrl: LoadingController,
   ) { }
 
   ngOnInit() {
   }
 
-  onLogin() {
+  authenticate(email: string, password: string) {
     this.isLoading = true;
-    this.authService.login();
-    this.loadingCtrl.create({
-      keyboardClose: true,
-      message: 'logging in....'
-    })
-    .then(loadingEl => {
-      loadingEl.present();
-      setTimeout(() => { // imitating the time taken for the login request to finish
-        this.isLoading = false;
-        loadingEl.dismiss();
-        this.router.navigateByUrl('/places/tabs/discover');
-      }, 1500);
-    });
+    const authObs: Observable < AuthResData > = this.isLogin ? this.authService.login(email, password) : this.authService.signup(email, password);
+    authObs.subscribe(() => this.router.navigateByUrl('/places/tabs/discover'));
   }
 
   onSubmit(form: NgForm) {
     if (form.invalid) {
       return;
     }
-    if (this.isLogin) {
-      // send req to login servers
-    } else {
-      // send req to signup servers
-    }
+    this.authenticate(form.value.email, form.value.password);
   }
   onSwitchAuthMode() {
     this.isLogin = !this.isLogin;

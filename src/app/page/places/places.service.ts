@@ -19,20 +19,20 @@ interface PlaceData {
   providedIn: 'root'
 })
 export class PlacesService {
-  private _places = new BehaviorSubject < Place[] >([]);
+  private _places = new BehaviorSubject < Place[] > ([]);
 
-  constructor (
+  constructor(
     private authService: AuthService,
     private http: HttpClient,
-  ) { }
+  ) {}
 
   get places(): Observable < Place[] > {
     return this._places.asObservable();
   }
 
-  fetchPlaces() {
-    return this.http.get<{[key: string]: PlaceData}>('https://ionic-base-app-7888a.firebaseio.com/offered-places.json')
-    .pipe(
+  fetchPlaces(): Observable < Place[]  > {
+    return this.http.get < { [key: string]: PlaceData } > (`https://ionic-base-app-7888a.firebaseio.com/offered-places.json`).pipe(
+      take(1),
       map(resData => {
         const places = [];
         for (const key in resData) {
@@ -47,7 +47,7 @@ export class PlacesService {
                 new Date(resData[key].availableFrom),
                 new Date(resData[key].availableTo),
                 resData[key].userId)
-              );
+            );
           }
         }
         return places; // return the reconstructed places array to the next operator
@@ -59,30 +59,38 @@ export class PlacesService {
     );
   }
   getPlace(id: any): Observable < Place > {
-    return this.http.get< Place >(`https://ionic-base-app-7888a.firebaseio.com/offered-places/${id}.json`)
-    .pipe(map(resData =>  new Place(
-      id,
-      resData.title,
-      resData.description,
-      resData.imageUrl,
-      resData.price,
-      new Date(resData.availableFrom),
-      new Date(resData.availableTo),
-      resData.userId,
+      return this.http.get < Place > (`https://ionic-base-app-7888a.firebaseio.com/offered-places/${id}.json`).pipe(
+      map(resData => new Place(
+        id,
+        resData.title,
+        resData.description,
+        resData.imageUrl,
+        resData.price,
+        new Date(resData.availableFrom),
+        new Date(resData.availableTo),
+        resData.userId,
       )));
-    // return this.places.pipe(
-    //   take(1), // take one object emitted from the observable and unsubscribe -> get 1 Place[] then unsub
-    //   map(pl => ({...pl.find(p => p.id === id)})));
   }
 
-  addPlace(place: Place): Observable < Place[]> {
+  addPlace(place: Place): Observable < Place[] > {
     let generatedID: string; // id that is being saved inside db
-    place.availableFrom = new Date(place.availableFrom);
-    place.availableTo = new Date(place.availableTo);
-    place.imageUrl = 'https://i.postimg.cc/43rP7SLr/Hotel-Sunroute-Higashi-Shinjuku.jpg';
-    place.userId = this.authService.userId;
-    return this.http.post<{name: string}>('https://ionic-base-app-7888a.firebaseio.com/offered-places.json', {...place, id: null})
-    .pipe(
+    return this.authService.userId.pipe(
+      take(1),
+      switchMap(userId => {
+        if (!userId) {
+          throw new Error('no user found!');
+        }
+        place.availableFrom = new Date(place.availableFrom);
+        place.availableTo = new Date(place.availableTo);
+        place.imageUrl = 'https://i.postimg.cc/43rP7SLr/Hotel-Sunroute-Higashi-Shinjuku.jpg';
+        place.userId = userId;
+        return this.http.post < {
+          name: string
+        } > ('https://ionic-base-app-7888a.firebaseio.com/offered-places.json', {
+          ...place,
+          id: null
+        });
+      }),
       switchMap(resData => {
         generatedID = resData.name; // unique id returned from firebase
         return this.places;
@@ -93,18 +101,19 @@ export class PlacesService {
         return this._places.next(p.concat(place));
       })
     ); // we use tap because we want to run the fn without completing the subs);
+
   }
 
   // updateOffer(placeId: string, title: string,  description: string): Observable < Place[]> {
-  updateOffer(placeId: string, title: string,  description: string): Observable < Place[]> {
+  updateOffer(placeId: string, title: string, description: string): Observable < Place[] > {
     let updatedPlaces: Place[];
-    return this.places.pipe (
+    return this.places.pipe(
       take(1),
-      switchMap(p =>  !p || p.length <= 0 ?  this.fetchPlaces() : of(p)), // if the data is not loaded yet fetch the data from the server
+      switchMap(p => !p || p.length <= 0 ? this.fetchPlaces() : of (p)), // if the data is not loaded yet fetch the data from the server
       switchMap(p => { // parse the fetch data
         const placeIdx = p.findIndex(pl => pl.id === placeId);
         updatedPlaces = [...p];
-        const  oldPlace = updatedPlaces[placeIdx];
+        const oldPlace = updatedPlaces[placeIdx];
         updatedPlaces[placeIdx] = new Place(
           oldPlace.id,
           title,
@@ -116,49 +125,24 @@ export class PlacesService {
           oldPlace.userId,
         );
         this._places.next(updatedPlaces);
-        return this.http.put< Place[] >(`https://ionic-base-app-7888a.firebaseio.com/offered-places/${placeId}.json`,
-          {...updatedPlaces[placeIdx], id: null}
-        );
+        return this.http.put < Place[] > (`https://ionic-base-app-7888a.firebaseio.com/offered-places/${placeId}.json`, {
+          ...updatedPlaces[placeIdx],
+          id: null
+        });
       }),
       tap(() => {
         this._places.next(updatedPlaces);
       })
     );
   }
+  deletePlace(placeId): Observable < Place[] > {
+    return this.http.delete(`https://ionic-base-app-7888a.firebaseio.com/offered-places/${placeId}.json`).pipe(
+      switchMap(() => this.places),  // ----------------------------------------------------------------------------------> Observable < Place[]>
+      take(1),
+      tap(p =>  { // -----------------------------------------------------------------------------------------------------> Observable < Place[]>
+        const latestBookings = p.filter(pl => pl.id !== placeId); // filter the deleted place from the _places subjects
+        this._places.next(latestBookings);
+      })
+    );
+  }
 }
-
-
-
-/**
- * new Place(
-        'p1',
-        'Manhattan Mansion',
-        'In The Heart of NY city',
-        'https://i.postimg.cc/sx2rBx06/manhattan-mansiions.jpg',
-        149.99,
-        new Date('2019-01-01'),
-        new Date('2019-12-31'),
-        'abc',
-      ),
-      new Place(
-        'p2',
-        'Bali resort',
-        'the best resort in bali',
-        'https://i.postimg.cc/7Pp4PHnV/bali-resort.jpg',
-        189.99,
-        new Date('2019-01-01'),
-        new Date('2019-12-31'),
-        'xyz',
-      ),
-      new Place(
-        'p3',
-        'Hotel Sunroute Higashi Shinjuku',
-        'the best hotel in tokyo city',
-        'https://i.postimg.cc/43rP7SLr/Hotel-Sunroute-Higashi-Shinjuku.jpg',
-        199.99,
-        new Date('2019-01-01'),
-        new Date('2019-12-31'),
-        'abc',
-      ),
-
- */

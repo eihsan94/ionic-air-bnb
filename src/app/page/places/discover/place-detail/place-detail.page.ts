@@ -9,6 +9,7 @@ import { Subscription } from 'rxjs';
 import { BookingsService } from 'src/app/page/bookings/bookings.service';
 import { Booking } from 'src/app/page/bookings/booking';
 import { AuthService } from 'src/app/page/auth/auth.service';
+import { switchMap, take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-place-detail',
@@ -29,7 +30,6 @@ export class PlaceDetailPage implements OnInit, OnDestroy {
     private modalCtrl: ModalController,
     private actionSheetCtrl: ActionSheetController,
     private bookingsService: BookingsService,
-    private loadingCtrl: LoadingController,
     private alertCtrl: AlertController,
     private router: Router,
 
@@ -38,29 +38,43 @@ export class PlaceDetailPage implements OnInit, OnDestroy {
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe(
       paramMap => {
-        this.isLoading = true;
-        !paramMap.has('placeId') ? this.navCtrl.navigateBack('/places/tabs/discover') :
-        this._placesSub.add(this.placesService.getPlace(paramMap.get('placeId')).subscribe( p => {
-          this.place = p;
-          this.isBookable = p.userId !== this.authService.userId;
-          this.isLoading = false;
-        },
-        err => {
-          this.alertCtrl.create({
-            header: 'An Error Occured!',
-            message: 'Data could not be fetched, Please try again later!',
-            buttons: [{
-              text: 'Okay',
-              handler: () => {
-                this.router.navigateByUrl('/places/tabs/discover');
-              }
-            }],
-          })
-          .then(alertEl => {
-            alertEl.present();
-          })
+        if (!paramMap.has('placeId')) {
+          this.navCtrl.navigateBack('/places/tabs/discover');
+          return;
         }
-        ))
+        this.isLoading = true;
+        let fetchedUserId: string;
+        this.authService.userId.pipe(
+          take(1),
+          switchMap(userId => {
+            if (!userId) {
+              throw new Error('user id not found!');
+            }
+            fetchedUserId = userId;
+            return this.placesService.getPlace(paramMap.get('placeId'));
+          })
+        ).subscribe(
+          p => {
+            this.place = p;
+            this.isBookable = p.userId !== fetchedUserId;
+            this.isLoading = false;
+          },
+          err => {
+            this.alertCtrl.create({
+              header: 'An Error Occured!',
+              message: 'Data could not be fetched, Please try again later!',
+              buttons: [{
+                text: 'Okay',
+                handler: () => {
+                  this.router.navigateByUrl('/places/tabs/discover');
+                }
+              }],
+            })
+            .then(alertEl => {
+              alertEl.present();
+            });
+          }
+        );
       }
     );
   }
@@ -95,7 +109,6 @@ export class PlaceDetailPage implements OnInit, OnDestroy {
   }
 
   openBookingModal(mode: 'select' | 'random') { // ts stating that the value of the mode should be selecet or random only
-    console.log(mode);
     const opts: ModalOptions =  {
       component: CreateBookingComponent,
       componentProps: {selectedPlace: this.place, selectedMode: mode},
@@ -106,28 +119,24 @@ export class PlaceDetailPage implements OnInit, OnDestroy {
       return modalEl.onDidDismiss(); // after close modal method
     })
     .then(resultData => {
-      console.log(resultData.data);
-      if (resultData.role === 'confirm') {
-        this.loadingCtrl.create({message: 'Booking your place...'}).then(loadingEl => {
-          loadingEl.present();
-          const data: Booking  = resultData.data.bookingData;
-          const newBooking = new Booking(
-            this.place.id,
-            this.place.title,
-            this.authService.userId,
-            this.place.title,
-            this.place.imageUrl,
-            data.firstName,
-            data.lastName,
-            data.guestNumber,
-            data.bookedFrom,
-            data.bookedTo,
-          );
-          this.bookingsService.addBooking(newBooking).subscribe(() => {
-            loadingEl.dismiss();
-          });
-        });
-      }
+      this.authService.userId.pipe(take(1)).subscribe(userId => {
+        if (resultData.role === 'confirm') {
+            const data: Booking  = resultData.data.bookingData;
+            const newBooking = new Booking(
+              this.place.id,
+              this.place.title,
+              userId,
+              this.place.title,
+              this.place.imageUrl,
+              data.firstName,
+              data.lastName,
+              data.guestNumber,
+              data.bookedFrom,
+              data.bookedTo,
+            );
+            this.bookingsService.addBooking(newBooking).subscribe();
+        }
+      });
     });
   }
 
